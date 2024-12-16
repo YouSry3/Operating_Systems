@@ -2,6 +2,7 @@
 package loginandsignup;
 
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -559,9 +560,17 @@ public class OpeatingSystems extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
              
     
-            private void ChangeState(String state){
+            private void ChangeState(String Status){
                 
-                stateofProcess.setText(state);
+                stateofProcess.setText(Status);
+                if(Status == "Ready"){
+                              stateofProcess.setBackground(Color.red);
+
+                 }
+                else if(Status == "Running") {
+                             stateofProcess.setBackground(Color.blue);
+
+                }
             }
             private void SeaderTableData(List<Object[]> TableDate ){
                 for (int i=0 ; i< TableDate.size(); i++){
